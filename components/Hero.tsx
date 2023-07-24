@@ -1,9 +1,32 @@
+"use client"
+
 //import Image from 'next/image'
 
-const Hero = () => {
-  return (
-    <div>Hero</div>
-  )
-}
+import CustomButton from "./CustomButton";
 
-export default Hero
+const Hero = () => {
+
+    const handleScroll = () => {
+       
+      };
+
+  return (
+    <div className="hero">
+      <div className="flex-1 pt-36 padding-x">
+        <h1 className="hero__title">
+           Encontre, Reservas, aluguer de carro rápido e super fácil!
+        </h1>
+        <p className="hero__subtitle">
+        Simplifique sua experiência de aluguel de carros com nosso processo de reserva sem esforço.
+        </p>
+        <CustomButton
+         title="Explorar Carros"
+         containerStyles="bg-primary-blue text-white rounded-full mt-10"
+         handleClick={handleScroll}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
